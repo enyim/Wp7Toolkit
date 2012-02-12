@@ -148,7 +148,7 @@ namespace Microsoft.Phone.Controls.Primitives
         private void OnDoneButtonClick(object sender, EventArgs e)
         {
             // Commit the value and close
-            Debug.Assert((_primarySelectorPart.DataSource.SelectedItem == _secondarySelectorPart.DataSource.SelectedItem) && (_secondarySelectorPart.DataSource.SelectedItem == _tertiarySelectorPart.DataSource.SelectedItem));
+				Debug.Assert((_primarySelectorPart.DataSource.SelectedItem == _secondarySelectorPart.DataSource.SelectedItem) && (_secondarySelectorPart.DataSource.SelectedItem == _tertiarySelectorPart.DataSource.SelectedItem));
             _value = ((DateTimeWrapper)_primarySelectorPart.DataSource.SelectedItem).DateTime;
             ClosePickerPage();
         }

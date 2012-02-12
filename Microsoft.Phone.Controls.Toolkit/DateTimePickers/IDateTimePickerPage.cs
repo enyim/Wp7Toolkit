@@ -7,14 +7,20 @@ using System;
 
 namespace Microsoft.Phone.Controls.Primitives
 {
-    /// <summary>
-    /// Represents an interface for DatePicker/TimePicker to use for communicating with a picker page.
-    /// </summary>
-    public interface IDateTimePickerPage
-    {
-        /// <summary>
-        /// Gets or sets the DateTime to show in the picker page and to set when the user makes a selection.
-        /// </summary>
-        DateTime? Value { get; set; }
-    }
+	/// <summary>
+	/// Represents an interface for DatePicker/TimePicker to use for communicating with a picker page.
+	/// </summary>
+	public interface IDateTimePickerPage
+	{
+		/// <summary>
+		/// Gets or sets the DateTime to show in the picker page and to set when the user makes a selection.
+		/// </summary>
+		DateTime? Value { get; set; }
+	}
+
+	public interface IBoundedDateTimePickerPage : IDateTimePickerPage
+	{
+		DateTime? UpperBound { get; set; }
+		DateTime? LowerBound { get; set; }
+	}
 }
