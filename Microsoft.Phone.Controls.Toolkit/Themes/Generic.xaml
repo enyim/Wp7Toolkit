@@ -1140,10 +1140,12 @@
                                                Foreground="{TemplateBinding Foreground}"
                                                TextWrapping="NoWrap"/>
                                 </Grid>
-                                <Image x:Name="Image" Grid.Row="1"
+                                <Border x:Name="Image" Height="173" Width="173" Grid.Row="1"  Background="{TemplateBinding Background}">
+                                <Image
                                        Height="173" Width="173"
                                        Stretch="UniformToFill"
                                        Source="{TemplateBinding Source}"/>
+                                </Border>
                             </Grid>
                         </StackPanel>
                     </ControlTemplate>
